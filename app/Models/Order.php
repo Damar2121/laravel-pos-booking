@@ -41,7 +41,7 @@ class Order extends Model
     {
         static::creating(function ($order) {
             if (empty($order->invoice_number)) {
-                $order->invoice_number = 'INV-' . date('Ymd') . '-' . strtoupper(Str::random(5));
+                $order->invoice_number = 'INV-'.date('Ymd').'-'.strtoupper(Str::random(5));
             }
         });
     }

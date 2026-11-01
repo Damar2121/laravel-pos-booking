@@ -5,8 +5,8 @@ namespace App\Filament\Resources\Orders\Schemas;
 use App\Models\Product;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Str;
 
@@ -19,7 +19,7 @@ class OrderForm
                 TextInput::make('invoice_number')
                     ->label('Nomor Faktur / Invoice')
                     ->required()
-                    ->default(fn () => 'INV-' . date('Ymd') . '-' . strtoupper(Str::random(5)))
+                    ->default(fn () => 'INV-'.date('Ymd').'-'.strtoupper(Str::random(5)))
                     ->unique(ignoreRecord: true),
                 Select::make('customer_id')
                     ->label('Pelanggan (Opsional)')

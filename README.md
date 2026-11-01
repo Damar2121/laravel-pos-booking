@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/Damar2121/laravel-pos-booking">
-    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="320" alt="Laravel Logo">
+    <img src=".github/assets/banner.svg" width="100%" alt="NexPOS Banner">
   </a>
 </p>
 
@@ -13,12 +13,13 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/Damar2121/laravel-pos-booking/actions/workflows/tests.yml"><img src="https://img.shields.io/github/actions/workflow/status/Damar2121/laravel-pos-booking/tests.yml?branch=main&label=Tests&logo=github&style=for-the-badge" alt="Build Status"></a>
   <a href="https://github.com/Damar2121/laravel-pos-booking/stargazers"><img src="https://img.shields.io/github/stars/Damar2121/laravel-pos-booking?style=for-the-badge&color=FFE000&logo=github" alt="GitHub Stars"></a>
   <a href="https://github.com/Damar2121/laravel-pos-booking/network/members"><img src="https://img.shields.io/github/forks/Damar2121/laravel-pos-booking?style=for-the-badge&color=blue&logo=github" alt="GitHub Forks"></a>
   <a href="https://laravel.com"><img src="https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel 12"></a>
   <a href="https://filamentphp.com"><img src="https://img.shields.io/badge/Filament-3.x%20%2F%205.x-F59E0B?style=for-the-badge&logo=filament&logoColor=white" alt="Filament"></a>
   <a href="https://php.net"><img src="https://img.shields.io/badge/PHP-%3E%3D%208.2-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.2+"></a>
-  <a href="https://mysql.com"><img src="https://img.shields.io/badge/MySQL-8.x-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"></a>
+  <a href="https://mysql.com"><img src="https://img.shields.io/badge/Database-MySQL%20%2F%20SQLite-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL or SQLite"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-emerald?style=for-the-badge" alt="MIT License"></a>
 </p>
 

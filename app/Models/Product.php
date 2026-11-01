@@ -38,10 +38,10 @@ class Product extends Model
     {
         static::creating(function ($product) {
             if (empty($product->slug)) {
-                $product->slug = Str::slug($product->name) . '-' . Str::random(5);
+                $product->slug = Str::slug($product->name).'-'.Str::random(5);
             }
             if (empty($product->sku)) {
-                $product->sku = 'SKU-' . strtoupper(Str::random(8));
+                $product->sku = 'SKU-'.strtoupper(Str::random(8));
             }
         });
     }

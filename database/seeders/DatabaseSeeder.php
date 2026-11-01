@@ -11,7 +11,6 @@ use App\Models\Product;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 use Spatie\Permission\Models\Role;
 
 class DatabaseSeeder extends Seeder
@@ -264,7 +263,7 @@ class DatabaseSeeder extends Seeder
 
         // 6. Setup Dummy Bookings
         $bookingToday = Booking::firstOrCreate(
-            ['booking_code' => 'BKG-' . date('Ymd') . '-001'],
+            ['booking_code' => 'BKG-'.date('Ymd').'-001'],
             [
                 'customer_id' => $createdCustomers[0]->id,
                 'product_id' => $createdProducts['SRV-001']->id,
@@ -279,7 +278,7 @@ class DatabaseSeeder extends Seeder
         );
 
         $bookingTomorrow = Booking::firstOrCreate(
-            ['booking_code' => 'BKG-' . date('Ymd', strtotime('+1 day')) . '-002'],
+            ['booking_code' => 'BKG-'.date('Ymd', strtotime('+1 day')).'-002'],
             [
                 'customer_id' => $createdCustomers[1]->id,
                 'product_id' => $createdProducts['SRV-004']->id,
@@ -294,7 +293,7 @@ class DatabaseSeeder extends Seeder
         );
 
         $bookingNextWeek = Booking::firstOrCreate(
-            ['booking_code' => 'BKG-' . date('Ymd', strtotime('+3 days')) . '-003'],
+            ['booking_code' => 'BKG-'.date('Ymd', strtotime('+3 days')).'-003'],
             [
                 'customer_id' => $createdCustomers[3]->id,
                 'product_id' => $createdProducts['SRV-003']->id,
@@ -310,7 +309,7 @@ class DatabaseSeeder extends Seeder
 
         // 7. Setup Dummy Orders (Sample Sales Transactions)
         $order1 = Order::firstOrCreate(
-            ['invoice_number' => 'INV-' . date('Ymd') . '-0001'],
+            ['invoice_number' => 'INV-'.date('Ymd').'-0001'],
             [
                 'customer_id' => $createdCustomers[0]->id,
                 'user_id' => $cashier->id,
@@ -346,7 +345,7 @@ class DatabaseSeeder extends Seeder
         );
 
         $order2 = Order::firstOrCreate(
-            ['invoice_number' => 'INV-' . date('Ymd') . '-0002'],
+            ['invoice_number' => 'INV-'.date('Ymd').'-0002'],
             [
                 'customer_id' => $createdCustomers[2]->id,
                 'user_id' => $admin->id,

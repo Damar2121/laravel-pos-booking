@@ -9,7 +9,6 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Spatie\Permission\Models\Role;
 use Tests\TestCase;
 
 class PosAndBookingTest extends TestCase
@@ -78,4 +77,3 @@ class PosAndBookingTest extends TestCase
         ]);
     }
 }
-

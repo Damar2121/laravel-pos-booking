@@ -32,7 +32,7 @@ class LatestOrders extends TableWidget
                     ->label('Kasir'),
                 TextColumn::make('total')
                     ->label('Total Transaksi')
-                    ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 0, ',', '.'))
+                    ->formatStateUsing(fn ($state) => 'Rp '.number_format($state, 0, ',', '.'))
                     ->weight('bold'),
                 TextColumn::make('payment_method')
                     ->label('Metode')

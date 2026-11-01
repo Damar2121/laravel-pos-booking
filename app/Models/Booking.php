@@ -34,7 +34,7 @@ class Booking extends Model
     {
         static::creating(function ($booking) {
             if (empty($booking->booking_code)) {
-                $booking->booking_code = 'BKG-' . date('Ymd') . '-' . strtoupper(Str::random(4));
+                $booking->booking_code = 'BKG-'.date('Ymd').'-'.strtoupper(Str::random(4));
             }
         });
     }

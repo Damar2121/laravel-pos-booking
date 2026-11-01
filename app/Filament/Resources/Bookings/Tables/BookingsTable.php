@@ -43,11 +43,11 @@ class BookingsTable
                     ->sortable(),
                 TextColumn::make('start_time')
                     ->label('Waktu')
-                    ->formatStateUsing(fn ($record) => substr($record->start_time, 0, 5) . ($record->end_time ? ' - ' . substr($record->end_time, 0, 5) : ''))
+                    ->formatStateUsing(fn ($record) => substr($record->start_time, 0, 5).($record->end_time ? ' - '.substr($record->end_time, 0, 5) : ''))
                     ->sortable(),
                 TextColumn::make('total_price')
                     ->label('Total Biaya')
-                    ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 0, ',', '.'))
+                    ->formatStateUsing(fn ($state) => 'Rp '.number_format($state, 0, ',', '.'))
                     ->sortable(),
                 TextColumn::make('status')
                     ->label('Status')

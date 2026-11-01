@@ -33,7 +33,7 @@ class OrdersTable
                     ->sortable(),
                 TextColumn::make('total')
                     ->label('Total')
-                    ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 0, ',', '.'))
+                    ->formatStateUsing(fn ($state) => 'Rp '.number_format($state, 0, ',', '.'))
                     ->sortable()
                     ->weight('bold'),
                 TextColumn::make('payment_method')

@@ -38,7 +38,7 @@ class ProductsTable
                     ->copyable(),
                 TextColumn::make('price')
                     ->label('Harga Jual')
-                    ->formatStateUsing(fn ($state) => 'Rp ' . number_format($state, 0, ',', '.'))
+                    ->formatStateUsing(fn ($state) => 'Rp '.number_format($state, 0, ',', '.'))
                     ->sortable(),
                 TextColumn::make('stock')
                     ->label('Stok')

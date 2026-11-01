@@ -5,8 +5,8 @@ namespace App\Filament\Resources\Bookings\Schemas;
 use App\Models\Product;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\TimePicker;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Str;
@@ -20,7 +20,7 @@ class BookingForm
                 TextInput::make('booking_code')
                     ->label('Kode Booking')
                     ->required()
-                    ->default(fn () => 'BKG-' . date('Ymd') . '-' . strtoupper(Str::random(4)))
+                    ->default(fn () => 'BKG-'.date('Ymd').'-'.strtoupper(Str::random(4)))
                     ->unique(ignoreRecord: true),
                 Select::make('customer_id')
                     ->label('Pelanggan')

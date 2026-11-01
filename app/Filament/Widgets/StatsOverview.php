@@ -30,22 +30,22 @@ class StatsOverview extends StatsOverviewWidget
             ->count();
 
         return [
-            Stat::make('Omset Penjualan Hari Ini', 'Rp ' . number_format($todayRevenue, 0, ',', '.'))
-                ->description('Dari ' . $totalOrdersToday . ' transaksi lunas')
+            Stat::make('Omset Penjualan Hari Ini', 'Rp '.number_format($todayRevenue, 0, ',', '.'))
+                ->description('Dari '.$totalOrdersToday.' transaksi lunas')
                 ->descriptionIcon('heroicon-m-banknotes')
                 ->color('success'),
 
-            Stat::make('Booking Aktif Hari Ini', $todayBookings . ' Jadwal')
+            Stat::make('Booking Aktif Hari Ini', $todayBookings.' Jadwal')
                 ->description('Reservasi terkonfirmasi & berjalan')
                 ->descriptionIcon('heroicon-m-calendar-days')
                 ->color('primary'),
 
-            Stat::make('Pelanggan Terdaftar', Customer::count() . ' Member')
+            Stat::make('Pelanggan Terdaftar', Customer::count().' Member')
                 ->description('Total customer loyal')
                 ->descriptionIcon('heroicon-m-user-group')
                 ->color('info'),
 
-            Stat::make('Produk Menipis (<=10)', $lowStockCount . ' Produk')
+            Stat::make('Produk Menipis (<=10)', $lowStockCount.' Produk')
                 ->description('Perlu restok barang segera')
                 ->descriptionIcon('heroicon-m-exclamation-triangle')
                 ->color($lowStockCount > 0 ? 'warning' : 'success'),

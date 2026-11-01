@@ -30,19 +30,30 @@ class PosPage extends Page
 
     // State properties
     public string $search = '';
+
     public string $selectedCategory = 'all';
+
     public array $cart = [];
+
     public ?int $customerId = null;
+
     public ?int $bookingId = null;
+
     public float $discount = 0;
+
     public float $taxPercent = 0;
+
     public string $paymentMethod = 'cash';
+
     public float $paidAmount = 0;
+
     public string $notes = '';
 
     // Modals
     public bool $showCheckoutModal = false;
+
     public bool $showReceiptModal = false;
+
     public ?array $completedOrderData = null;
 
     public function mount(): void
@@ -78,8 +89,8 @@ class PosPage extends Page
             $query->where('category_id', $this->selectedCategory);
         }
 
-        if (!empty(trim($this->search))) {
-            $term = '%' . trim($this->search) . '%';
+        if (! empty(trim($this->search))) {
+            $term = '%'.trim($this->search).'%';
             $query->where(function ($q) use ($term) {
                 $q->where('name', 'like', $term)
                     ->orWhere('sku', 'like', $term)
@@ -98,8 +109,9 @@ class PosPage extends Page
     public function addToCart(int $productId): void
     {
         $product = Product::find($productId);
-        if (!$product) {
+        if (! $product) {
             Notification::make()->title('Produk tidak ditemukan')->danger()->send();
+
             return;
         }
 
@@ -111,6 +123,7 @@ class PosPage extends Page
                 ->body("Sisa stok produk {$product->name} adalah {$product->stock}.")
                 ->warning()
                 ->send();
+
             return;
         }
 
@@ -138,7 +151,7 @@ class PosPage extends Page
 
     public function updateQuantity(int $productId, int $delta): void
     {
-        if (!isset($this->cart[$productId])) {
+        if (! isset($this->cart[$productId])) {
             return;
         }
 
@@ -151,11 +164,13 @@ class PosPage extends Page
                 ->body("Stok maksimum {$product->name} adalah {$product->stock}.")
                 ->warning()
                 ->send();
+
             return;
         }
 
         if ($newQty <= 0) {
             $this->removeFromCart($productId);
+
             return;
         }
 
@@ -179,7 +194,7 @@ class PosPage extends Page
     public function loadBooking(int $bookingId): void
     {
         $booking = Booking::with(['customer', 'product'])->find($bookingId);
-        if (!$booking) {
+        if (! $booking) {
             return;
         }
 
@@ -208,12 +223,14 @@ class PosPage extends Page
             return 0;
         }
         $afterDiscount = max(0, $this->subtotal - $this->discount);
+
         return ($afterDiscount * $this->taxPercent) / 100;
     }
 
     public function getGrandTotalProperty(): float
     {
         $total = ($this->subtotal - $this->discount) + $this->taxAmount;
+
         return max(0, $total);
     }
 
@@ -222,6 +239,7 @@ class PosPage extends Page
         if ($this->paymentMethod === 'cash') {
             return max(0, $this->paidAmount - $this->grandTotal);
         }
+
         return 0;
     }
 
@@ -239,6 +257,7 @@ class PosPage extends Page
     {
         if (empty($this->cart)) {
             Notification::make()->title('Keranjang belanja masih kosong!')->warning()->send();
+
             return;
         }
 
@@ -255,6 +274,7 @@ class PosPage extends Page
     {
         if (empty($this->cart)) {
             Notification::make()->title('Keranjang belanja kosong!')->warning()->send();
+
             return;
         }
 
@@ -264,6 +284,7 @@ class PosPage extends Page
                 ->body('Nominal pembayaran tunai tidak boleh lebih kecil dari grand total.')
                 ->danger()
                 ->send();
+
             return;
         }
 
