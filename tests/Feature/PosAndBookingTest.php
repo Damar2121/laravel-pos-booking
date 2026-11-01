@@ -78,3 +78,4 @@ class PosAndBookingTest extends TestCase
         ]);
     }
 }
+

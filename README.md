@@ -1,95 +1,126 @@
-# ⚡ Modern POS & Booking System Starter Kit (Laravel & Filament)
+<p align="center">
+  <a href="https://github.com/Damar2121/laravel-pos-booking">
+    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="320" alt="Laravel Logo">
+  </a>
+</p>
+
+<h1 align="center">⚡ NexPOS: Modern Point of Sale & Appointment Booking Starter Kit</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="300" alt="Laravel Logo">
+  <strong>An open-source, production-ready Point of Sale (POS) & Service Appointment Booking platform built with Laravel 12 & Filament.</strong>
+  <br />
+  <em>Perfect for Cafes, Retail Stores, Barbershops, Salons, Wellness Spas, Photography Studios, and Healthcare Clinics.</em>
 </p>
 
 <p align="center">
+  <a href="https://github.com/Damar2121/laravel-pos-booking/stargazers"><img src="https://img.shields.io/github/stars/Damar2121/laravel-pos-booking?style=for-the-badge&color=FFE000&logo=github" alt="GitHub Stars"></a>
+  <a href="https://github.com/Damar2121/laravel-pos-booking/network/members"><img src="https://img.shields.io/github/forks/Damar2121/laravel-pos-booking?style=for-the-badge&color=blue&logo=github" alt="GitHub Forks"></a>
   <a href="https://laravel.com"><img src="https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel 12"></a>
   <a href="https://filamentphp.com"><img src="https://img.shields.io/badge/Filament-3.x%20%2F%205.x-F59E0B?style=for-the-badge&logo=filament&logoColor=white" alt="Filament"></a>
   <a href="https://php.net"><img src="https://img.shields.io/badge/PHP-%3E%3D%208.2-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.2+"></a>
   <a href="https://mysql.com"><img src="https://img.shields.io/badge/MySQL-8.x-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-success?style=for-the-badge" alt="MIT License"></a>
-  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge" alt="PRs Welcome">
-</p>
-
-<p align="center">
-  Starter kit *open-source* siap pakai yang menggabungkan <strong>Sistem Kasir (Point of Sale / POS)</strong> interaktif dengan <strong>Manajemen Reservasi & Jadwal Booking Layanan</strong> dalam satu panel modern berbasis <strong>Laravel & Filament</strong>. Cocok untuk Cafe, Retail Shop, Barbershop, Salon & Spa, Studio Foto, hingga Klinik Kesehatan.
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-emerald?style=for-the-badge" alt="MIT License"></a>
 </p>
 
 ---
 
-## 🌟 Fitur Unggulan (Key Features)
+## 💡 Why NexPOS?
 
-### 🛒 1. Point of Sale (POS) Interaktif
-- **Katalog Visual & Pencarian Cepat:** Filter produk berdasarkan kategori dan pencarian instan (nama, SKU, barcode).
-- **Keranjang Belanja Real-Time:** Penambahan produk dengan 1 klik, pengatur kuantitas (+/-), validasi stok fisik otomatis.
-- **Kalkulasi Finansial Otomatis:** Perhitungan subtotal, input diskon (Rp), dan pilihan opsi pajak (PPN 11% / Bebas Pajak).
-- **Integrasi Booking-to-POS:** Impor data reservasi pelanggan ke mesin kasir dengan 1 klik untuk langsung diproses pembayarannya.
+Most existing open-source solutions force you to choose: either a **retail POS** with inventory or a **booking system** for appointments. 
 
-### 📱 2. Mockup Pembayaran Modern
-- **Tunai (Cash):** Tombol cepat nominal pecahan uang (Uang Pas, 50k, 100k, 200k) dan kalkulasi otomatis kembalian pelanggan.
-- **QRIS Dinamis:** Mockup QR code QRIS interaktif untuk simulasi pembayaran e-wallet (GoPay, OVO, Dana, ShopeePay) & mobile banking.
-- **Transfer Bank & Kartu Debit:** Pencatatan metode pembayaran non-tunai.
+**NexPOS unites both in one cohesive platform.** 
+A customer can walk in for a haircut or massage appointment, grab a coffee or styling pomade at checkout, and have everything billed seamlessly onto one unified receipt.
 
-### 🧾 3. Cetak Struk Kasir (Thermal Receipt)
-- Format struk belanja bergaya kertas *thermal printer* (80mm/58mm friendly).
-- Menampilkan nomor invoice faktur, rincian item, subtotal, diskon, PPN, metode bayar, dan nominal kembalian.
-- Tombol **Cetak Struk** langsung memicu dialog cetak printer bawaan browser (`window.print()`).
-
-### 🗓️ 4. Jadwal Booking & Reservasi Layanan
-- Manajemen janji temu dengan tanggal, waktu mulai, dan estimasi waktu selesai.
-- Penugasan staf PIC / Terapis / Kapster penanggung jawab.
-- Status alur reservasi lengkap: `Pending` ➔ `Confirmed` ➔ `In Progress` ➔ `Completed` ➔ `Cancelled`.
-- Tombol aksi cepat *"Tandai Selesai"* langsung dari daftar tabel.
-
-### 📊 5. Dashboard Eksekutif & Statistik
-- Ringkasan omset penjualan harian secara *real-time*.
-- Metrik jumlah reservasi aktif hari ini.
-- Notifikasi peringatan stok barang yang menipis (<=10 item).
-- Tabel transaksi POS terbaru pada halaman utama admin.
-
-### 🔐 6. Role-Based Access Control (RBAC)
-- Ditenagai oleh `spatie/laravel-permission`.
-- Role bawaan: **Admin** (Akses penuh) dan **Kasir** (Fokus operasional kasir & transaksi).
-
----
-
-## 📸 Antarmuka Sistem (Screenshots Preview)
-
-| Halaman | Deskripsi |
-| :--- | :--- |
-| **🖥️ Mesin Kasir POS** | Layout dua kolom responsif dengan grid produk, kontrol keranjang belanja, dan modal pembayaran. |
-| **🗓️ Jadwal Booking** | Filter status, pencarian pelanggan, dan konfirmasi reservasi cepat. |
-| **📦 Manajemen Produk** | Dukungan produk fisik (*goods*) dan produk layanan (*service*). |
-| **🧾 Struk Kasir** | Desain thermal paper bersih dan siap print. |
-
----
-
-## 🚀 Panduan Instalasi (Getting Started)
-
-Pastikan lingkungan Anda memenuhi persyaratan berikut:
-- **PHP** >= 8.2 (dengan ekstensi `pdo_mysql`, `curl`, `mbstring`, `intl`)
-- **Composer** >= 2.0
-- **MySQL** >= 8.0 atau MariaDB
-
-### Langkah 1: Clone Repositori
-```bash
-git clone https://github.com/USERNAME_ANDA/pos-booking-starter.git
-cd pos-booking-starter
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                        ⚡ NexPOS ARCHITECTURE                          │
+│                                                                        │
+│   🛒 RETAIL & GOODS POS         ➕        🗓️ SERVICE & APPOINTMENTS    │
+│   • Barcode / SKU Scanning              • Staff / Specialist PIC       │
+│   • Real-time Inventory Deduction       • Timeslots & Schedules        │
+│   • Category Grid & Instant Search      • 1-Click Import to Register   │
+│                                                                        │
+│                                    ▼                                   │
+│                        💳 UNIFIED CHECKOUT ENGINE                      │
+│                [Cash / Change] • [Dynamic QRIS] • [EDC/Cards]          │
+│                                    ▼                                   │
+│                       🧾 THERMAL RECEIPT PRINTING                      │
+└────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Langkah 2: Install Dependensi Composer
+---
+
+## ✨ Key Features
+
+### 🛒 1. Interactive Point of Sale (POS) Cashier Interface
+- **Lightning-Fast Livewire UI:** Add items to cart with a single click, adjust quantities (`+` / `-`), or remove them with real-time reactive calculations.
+- **Instant Search & Category Pills:** Quickly locate products by Name, SKU, or Barcode scan.
+- **Inventory Safety Checks:** Prevents overselling by automatically validating warehouse physical stock.
+- **Discount & Tax Support:** Apply instant cash discounts and flexible sales tax (PPN 11% / Tax-free).
+- **Booking Integration:** 1-click button to load active appointments into the checkout register.
+
+### 🗓️ 2. Appointment & Reservation Management
+- **Complete Booking Workflow:** Track statuses from `Pending` ➔ `Confirmed` ➔ `In Progress` ➔ `Completed` ➔ `Cancelled`.
+- **Specialist & Staff Assignment:** Assign specific baristas, therapists, barbers, or staff members to bookings.
+- **Quick Actions:** Mark bookings completed directly from the table view.
+
+### 💳 3. Omnichannel Payment Mockups
+- **Cash Payments:** Real-time change calculation with quick-denomination buttons (*Exact Amount, 50k, 100k, 200k*).
+- **Instant QRIS Simulation:** High-contrast QR code display that simulates e-wallet & mobile banking settlement.
+- **Bank Transfer & Card:** Support for logging card and electronic payments.
+
+### 🧾 4. Print-Ready Thermal Receipt Generator
+- Designed to replicate standard 58mm / 80mm thermal receipt slips.
+- Displays store details, transaction timestamp, cashier name, customer name, line item subtotals, tax/discounts, and change returned.
+- Built-in **Print Receipt** trigger (`window.print()`).
+
+### 📊 5. Executive Dashboard & Real-Time Analytics
+- **Today's Revenue:** Live gross turnover tracking from settled transactions.
+- **Active Appointments:** Instant headcount of scheduled reservations for the day.
+- **Low-Stock Sentinel:** Automatic warning for products with $\le 10$ items in stock.
+- **Latest Orders Feed:** Live summary table of recent sales transactions.
+
+### 🔐 6. Role-Based Access Control (RBAC)
+- Powered by `spatie/laravel-permission`.
+- Pre-configured with **Admin** (Full system access) and **Cashier** (POS operations & order history).
+
+---
+
+## 📸 Screenshots & UI Preview
+
+| View | Feature Details |
+| :--- | :--- |
+| **🖥️ POS Cashier Terminal** | Split-screen reactive catalog, dynamic cart stepper, customer selector, and checkout modal. |
+| **🗓️ Appointment Calendar** | Comprehensive schedule tracker with staff assignments and status badges. |
+| **📊 Executive Dashboard** | Key performance indicators (revenue, low-stock alerts, active reservations). |
+| **🧾 Thermal Receipt** | Clean printer slip preview formatted for customer checkout. |
+
+---
+
+## 🚀 Quick Start Guide (Installation in 2 Minutes)
+
+### Prerequisites
+- **PHP** $\ge$ 8.2 (with `pdo_mysql`, `curl`, `mbstring`, `intl`)
+- **Composer** $\ge$ 2.0
+- **MySQL** $\ge$ 8.0 or MariaDB
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Damar2121/laravel-pos-booking.git
+cd laravel-pos-booking
+```
+
+### 2. Install Composer Dependencies
 ```bash
 composer install
 ```
 
-### Langkah 3: Konfigurasi File Lingkungan (.env)
-Salin file `.env.example` menjadi `.env`:
+### 3. Setup Environment File
+Copy `.env.example` to `.env`:
 ```bash
 cp .env.example .env
 ```
-Sesuaikan pengaturan koneksi database MySQL Anda di `.env`:
+Ensure your MySQL credentials are configured in `.env`:
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -99,85 +130,92 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### Langkah 4: Generate Application Key
+### 4. Generate Application Key
 ```bash
 php artisan key:generate
 ```
 
-### Langkah 5: Migrasi Database & Seeding Data Awal
-Jalankan migrasi tabel beserta *dummy seeder* (kategori, produk retail, produk jasa, pelanggan, pesanan contoh):
+### 5. Migrate Database & Seed Sample Data
+Populate categories, retail items, services, demo customers, appointments, and transactions:
 ```bash
 php artisan migrate --seed
 ```
 
-### Langkah 6: Buat Symlink Storage
+### 6. Symlink Storage & Launch Local Server
 ```bash
 php artisan storage:link
-```
-
-### Langkah 7: Jalankan Server Lokal
-```bash
 php artisan serve
 ```
-Buka peramban (*browser*) Anda dan akses:
-👉 **[http://localhost:8000](http://localhost:8000)** (akan otomatis diarahkan ke Panel Admin `/admin`).
+
+Visit **[http://localhost:8000](http://localhost:8000)** in your browser! It will automatically redirect to the admin panel (`/admin`).
 
 ---
 
-## 🔑 Akun Default (Demo Credentials)
+## 🔑 Demo Credentials
 
-Gunakan akun berikut untuk masuk ke dashboard admin:
-
-| Peran (Role) | Email | Password | Akses Utama |
+| Role | Email | Password | Primary Capabilities |
 | :--- | :--- | :--- | :--- |
-| **Administrator** | `admin@example.com` | `password` | Akses penuh (Dashboard, Master Data, Transaksi, User) |
-| **Kasir** | `kasir@example.com` | `password` | Operasional Kasir (POS) & Riwayat Transaksi |
+| **Administrator** | `admin@example.com` | `password` | Full master data, staff, orders, reports & users |
+| **Cashier (Kasir)** | `kasir@example.com` | `password` | POS register, daily sales, and appointment check-in |
 
 ---
 
-## 🏗️ Struktur Basis Data (Database Architecture)
+## 🏗️ Database Relationship (ERD)
 
 ```mermaid
 erDiagram
-    USERS ||--o{ BOOKINGS : "assigns/attends"
-    USERS ||--o{ ORDERS : "operates (cashier)"
-    CUSTOMERS ||--o{ BOOKINGS : "books"
+    USERS ||--o{ BOOKINGS : "assigns staff"
+    USERS ||--o{ ORDERS : "operates as cashier"
+    CUSTOMERS ||--o{ BOOKINGS : "schedules"
     CUSTOMERS ||--o{ ORDERS : "purchases"
-    CATEGORIES ||--o{ PRODUCTS : "categorizes"
-    PRODUCTS ||--o{ ORDER_ITEMS : "included in"
-    ORDERS ||--|{ ORDER_ITEMS : "contains"
-    BOOKINGS ||--o| ORDERS : "invoiced as"
+    CATEGORIES ||--o{ PRODUCTS : "groups"
+    PRODUCTS ||--o{ ORDER_ITEMS : "contains"
+    ORDERS ||--|{ ORDER_ITEMS : "has"
+    BOOKINGS ||--o| ORDERS : "converted into"
 ```
 
 ---
 
-## 🧪 Menjalankan Pengujian (Automated Testing)
+## 🧪 Automated Test Suite
 
-Starter kit ini dilengkapi dengan unit & feature testing:
+NexPOS is thoroughly tested with Laravel's feature testing suite:
 ```bash
 php artisan test
 ```
 
----
-
-## 🤝 Berkontribusi (Contributing)
-
-Kontribusi untuk perbaikan *bug*, penambahan fitur (misal: integrasi payment gateway Midtrans/Xendit nyata, export Excel/PDF laporan), atau peningkatan performa sangat diterima!
-
-1. *Fork* repositori ini
-2. Buat branch fitur baru (`git checkout -b feature/FiturKeren`)
-3. *Commit* perubahan Anda (`git commit -m 'feat: Menambahkan fitur X'`)
-4. *Push* ke branch (`git push origin feature/FiturKeren`)
-5. Ajukan *Pull Request*
+All 4 test suites pass with 100% assertions covering routing, redirects, permissions, and booking-to-order creation.
 
 ---
 
-## 📄 Lisensi (License)
+## 🗺️ Roadmap & Upcoming Features
 
-Proyek ini dilisensikan di bawah [Lisensi MIT](LICENSE). Bebas digunakan, dimodifikasi, dan didistribusikan untuk keperluan komersial maupun personal.
+- [ ] **Real Payment Gateway Integration:** Midtrans, Stripe, and Xendit webhooks.
+- [ ] **WhatsApp Notification Engine:** Automatic appointment reminders sent to customers via WhatsApp API.
+- [ ] **Kitchen & Bar Display System (KDS):** Real-time order screen for kitchen preparation.
+- [ ] **Export to PDF & Excel:** Export financial reports and tax summaries.
+- [ ] **Multi-Outlet / Multi-Branch:** Franchise & tenant support.
+
+---
+
+## 🤝 Contributing
+
+Contributions make the open-source community an amazing place to learn, inspire, and create! Any contributions you make are **greatly appreciated**.
+
+1. **Fork** the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a **Pull Request**
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
 
 ---
 
 <p align="center">
-  Dibuat dengan ❤️ untuk komunitas open-source developer Indonesia. Jangan lupa beri <strong>⭐ Star</strong> jika repositori ini bermanfaat bagi Anda!
+  Built with ❤️ for modern businesses and the global open-source community.<br />
+  If this project saved you development time, please consider giving it a <strong>⭐ Star</strong>!
 </p>

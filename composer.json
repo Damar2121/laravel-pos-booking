@@ -1,9 +1,23 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "damar2121/laravel-pos-booking",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "⚡ NexPOS: Modern Point of Sale (POS) & Appointment Booking System Starter Kit built with Laravel 12 & Filament.",
+    "keywords": [
+        "laravel",
+        "filament",
+        "filamentphp",
+        "pos",
+        "point-of-sale",
+        "booking",
+        "booking-system",
+        "appointment-scheduling",
+        "starter-kit",
+        "retail",
+        "barbershop",
+        "livewire"
+    ],
+    "homepage": "https://github.com/Damar2121/laravel-pos-booking",
     "license": "MIT",
     "require": {
         "php": "^8.2",
